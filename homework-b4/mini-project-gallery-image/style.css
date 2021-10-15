@@ -1,0 +1,110 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.modal {
+  background-color: rgba(53, 194, 18, 0.384);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.full-img {
+  position: absolute;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dynamic Classes */
+.full-img.open {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.section-default {
+  height: 600px;
+  width: 100%;
+}
+
+.menu-nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-nav ul li {
+  padding: 10px;
+  background: #333333;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+/* Back To Top */
+#btnBackToTop {
+  width:40px;
+  height:40px;
+  background-color: black;
+  position: fixed;
+  top: auto;
+  left: auto;
+  bottom: 40px;
+  right: 40px;
+  transition: .3s;
+  border-radius: 50%;
+  text-align:center;
+  cursor: pointer;
+}
+#btnBackToTop span {
+  color:#FFFFFF;
+  font-size:30px;
+  font-weight:bold;
+  line-height: 50px;
+}
+
+/* Color */
+
+#colors {
+  background-color: darkslategray;
+  text-align: center;
+}
+#colors-title {
+  padding: 10px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+#text-color {
+  background-color:#FFFFFF;
+}
+#btn-change-color {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}

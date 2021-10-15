@@ -1,0 +1,8 @@
+
+4. Bài tập nhỏ: Tạo 1 gallery popup đơn giản
+Link source: https://drive.google.com/drive/folders/19MM0LoGycRFIPpw714JrjgoRfJjLUsBU?usp=sharing
+Yêu cầu xử lý: khi click vào thì show popup với hình ảnh tương ứng ở attribute alt (Thêm class open ở thẻ <div class="modal"> để xem ví dụ)
+
+Yêu cầu thêm:
+4.1 Tạo 4 section và menu tương ứng: 'Gallery', 'Books (Tên tuỳ thích)', 'Students (Tên tuỳ thích)', 'Color'. Khi click vào menu thì scroll tới section tương ứng. (DÙng Javascript (ScrollIntoView), ko chơi html với css href="#id" nha)
+4.2 Ở section Color, a muốn có 1 text và 1 button, text sẽ show color style color mặc định rgb(255, 255, 255), button text là Switch. Khi click button sẽ random màu bất kì (Thay đổi màu background và text show color). Hướng dẫn, random 3 số từ 0 đến 255 (mã màu) rgb(?,?,?) và cập nhật style tương ứng.
