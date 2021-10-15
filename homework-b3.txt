@@ -1,0 +1,21 @@
+Note: Các bài tập liên quan tới DOM thì bên html file tạo <div id="Tên bài tập tương ứng"> và xử lý trong này
+
+1. Tạo Array với các số bất kỳ, tính tổng các số trong array, in ra màn hình html
+2. Tạo Array với các chuỗi string bất kỳ, lặp và in ra màn hình html tương ứng với mỗi thẻ <p>. Ví dụ: ['haha', 'hehe'] -> 
+<p>haha</p> 
+<p>hehe</p>
+
+2.2 Add thêm 1 thẻ <p> với text bất kỳ thêm vào ở đầu và ở cuối. ví dụ: 
+<p>insert ở đầu</p> // Gợi ý: dùng .insertBefore
+<p>haha</p> 
+<p>hehe</p>
+<p>insert ở cuối</p> // Gợi ý: dùng .appendChild
+
+3. Tạo 1 button với sự kiện onclick, khi user bấm vào thì ẩn hiện text bất kỳ, thay đổi background của màn hình.
+3.2 Tạo thêm 1 button với text "Bảo trì" và sự kiện ondblclick, khi bấm vào thì ẩn hiện tất cả UI trên trang, show text "Page bảo trì".
+
+
+////////////////////
+4. Bài tập nhỏ: Tạo 1 gallery popup đơn giản
+Link source: https://drive.google.com/drive/folders/19MM0LoGycRFIPpw714JrjgoRfJjLUsBU?usp=sharing
+Yêu cầu xử lý: khi click vào thì show popup với hình ảnh tương ứng ở attribute alt (Thêm class open ở thẻ <div class="modal"> để xem ví dụ)

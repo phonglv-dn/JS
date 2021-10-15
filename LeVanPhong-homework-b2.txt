@@ -1,0 +1,106 @@
+1. Viết hàm với tham số đầu vào là 1 số bất kỳ, kiểm tra và in ra màn hình là số chẵn hay lẽ. Ví dụ: Số 3 là số lẽ.
+1.2 Dựa vào hàm ở bài 1, kiểm tra thêm số đó là số âm hay dương. Ví dụ: Số 3 là số âm và lẽ.
+2. Viết hàm với tham số đầu vào là 1 số trong tháng (1 tới 12), kiểm tra và in ra tháng đó có bao nhiều ngày? Ví dụ Tháng 1 có 31 ngày
+2.2 Viết hàm với đầu vào là 1 số bất kỳ, kiểm tra số đó và in ra là số nguyên dương hay số nguyên âm, nếu không phải cả 2 thì in ra không phải số cần kiểm tra.
+3. Viết hàm tính tổng 2 số với tất cả các phép tính (+ - * / %) thông qua tham số truyền vào
+Yêu cầu của bài 2: a muốn có 1 hàm mà truyền vào 3 tham số a, b là 2 số muốn tính, tham số thứ 3 (+ - * / %) sẽ quyết định kết quả. Kiểm tra kỹ đầu vào của 2 số muốn tính, nếu không phải số thì exit và thông báo số nhập không đúng.
+================================ Bài làm ======================================
+1. Kiểm tra chẵn lẻ
+
+function evenCheck(n) {
+    if(n % 2 === 0) {
+        console.log(n, ' là số chẵn')
+    } else
+    console.log(n, ' là số lẻ')
+}
+evenCheck(8); // 8 ' là số chẵn'
+
+---------------------------------------------------
+1.2 Kiểm tra âm dương bằng hàm có sẵn
+
+function evenCheck(n) {
+    if(n % 2 === 0 && n > 0) {
+        console.log(n, ' là số chẵn dương')
+    } else
+    if(n % 2 === 0 && n < 0) {
+        console.log(n, ' là số chẵn âm')
+    } else
+    if(n % 2 !== 0 && n > 0) {
+        console.log(n, ' là số lẻ dương')
+    } else
+    console.log(n, ' là số lẻ âm')
+}
+evenCheck(-9); // 8 ' là số chẵn'
+
+==================================================================
+2. Tính số ngày trong tháng
+
+const monthCheck = ((month, year)=>{
+    switch(month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            console.log('Tháng ', month, ' có 31 ngày');
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            console.log('Tháng ', month, ' có 30 ngày');
+            break;
+        case 2:
+            if(year % 400 === 0 || year % 4 === 0 && year % 100 !== 0){
+                console.log('Tháng ', month, ' có 29 ngày');
+            }else
+            console.log('Tháng ', month, ' có 28 ngày');
+            break;
+        default:
+            console.log('Không có tháng ',month);
+            break;
+    }
+})
+monthCheck(2,2000); // Tháng 2 có 29 ngày
+
+====================================================================
+2.2 Kiểm tra tính âm dương của số nguyên
+
+const checkLunisolar = ((n)=> {
+    if(n % 1 === 0) {
+        if (n > 0) {
+            console.log(n,' là số nguyên dương');
+        } else
+        console.log(n,' là số nguyên âm');
+    }
+    else
+    console.log(n,' không phải số nguyên')
+})
+checkLunisolar(-2); //-2 là số nguyên âm
+
+===============================================================
+3. Phép tính 2 số
+
+const mathFunction = ((a,b,math)=> {
+    if (typeof a === 'number' && typeof b === 'number'){
+        switch(math) {
+            case '+':
+                console.log(a,math,b,' = ',a + b)
+                break;
+            case '-':
+                console.log(a,math,b,' = ',a - b)
+                break;
+            case '*':
+                console.log(a,math,b,' = ',a * b)
+                break;
+            case '/':
+                console.log(a,math,b,' = ',a / b)
+                break;
+        }
+    } else
+    console.log('Biến a và b phải là kiểu số')
+})
+mathFunction(3,4,'/');
+mathFunction('4',4,'-');

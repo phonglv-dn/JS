@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+.text-baiBa {
+  display: none;
+}
+#baiBa {
+  background-color: black;
+  width: 50%;
+  border: 2px solid pink;
+  border-radius:5px;
+  padding: 5px;
+}
+#thongBaoBaotri {
+  display: none;
+}

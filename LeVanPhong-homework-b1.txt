@@ -1,0 +1,175 @@
+1. Khai báo 5 tên biến đúng, 5 tên biến sai
+2. Làm 5 bài toán sử dụng 5 toán tử: + - * / %
+3. Tính kết quả các bài tập sau đây, in ra màn hình và giải thích tại sao lại ra được kết quả như vậy:
+   3.1 x = 5. Tính: ++x + x++ - --x - x--
+   3.2 x = 6, y = 10. Tính: ++y - y++ + x++ + x-- - --x - --y
+   3.3 x = 10, y = 12, z = 16. Tính: x++ + z-- - --x + --y - y-- + ++y + ++z + --z + x--
+   enter, tính lần 2 bài 3.3: ++x - x++ + z++ + ++y - y-- 
+4. Khai báo 5 biến với 5 kiểu dữ liệu 
+5. Khai báo biến với kiểu dữ liệu Array như sau: [1,2,3,4,5,6,7,8,9,10]
+   5.1 Tính tổng (+) phần tử đầu tiên (0) và phần từ thứ 2 (1)
+   5.2 Tính tích (*) phần tử đầu tiên (0) và phần từ cuối cùng (9)
+6. Khai báo 1 biến với kiểu dữ liệu Object, bào gồm firstName, lastName, age, favorite
+   6.1 Thay đổi firstName, lastName với text bất kỳ
+   6.2 In ra màn hình firstName + lastName mới
+
+======================= Bài 1: ===========================
+
+1.1) Khai báo 5 tên biến đúng:
+
+var a = 5;
+var nameStudent = 'Le Van Phong';
+var gioiTinhNam = true;
+var arrStudents = [
+    'Le Van Phong',
+    'Vo Hoang Long',
+    'Tran Xuan Tu'
+];
+var objThongTin = {
+    id:'01',
+    age: 20,
+    gioiTinhNam: true,
+}
+
+console.log(a)
+console.log(nameStudent)
+console.log(gioiTinhNam)
+console.log(arrStudents)
+console.log(objThongTin)
+------------------------------------
+1.2) Khai báo 5 tên biến sai:
+
+var 1a = 5;
+var name Student = 'Le Van Phong';
+var gioi+tinh+nam = true;
+var arr+Students = [
+    'Le Van Phong',
+    'Vo Hoang Long',
+    'Tran Xuan Tu'
+];
+var @objThongTin = {
+    id:'01',
+    age: 20,
+    gioiTinhNam: true,
+}
+
+======================Bài 2:========================
+
+2) 5 bài toán sử dụng 5 toán tử:
+var a = 5;
+var b = 7;
+console.log ('a + b = ',a + b);
+console.log ('a - b = ',a - b);
+console.log ('a * b = ',a * b);
+console.log ('a / b = ',a / b);
+console.log ('a % b = ',a % b);
+
+======================= Bài 3: ======================
+
+3) In ra màn hình và giải thích bài tập cụ thể:
+3.1) x = 5. Tính: ++x + x++ - --x - x--
+
+var x = 5;
+console.log('Kết quả của "++x + x++ - --x - x--" là: ', ++x + x++ - --x - x--);
+/*
+++x là 5 sẽ tăng bằng thành 6, x = 6,
+x++ là 6 sẽ tăng bằng 7 cho lần tính toán tiếp theo, như vậy ++x + x++ = 6 + 6 = 12(1), x = 7
+--x là 7 sẽ giảm ngay bằng 6, như vậy ++x + x++ - --x là lấy 12(1) - 6 = 6(2), x = 6
+x-- là 6 sẽ giảm bằng 5 cho lần tính tiếp theo, như vậy ++x + x++ - --x - x-- là lấy 6(2) - 6 = 0
+*/
+-------------------------------------------------------------------------------------------------------
+3.2) x = 6, y = 10. Tính: ++y - y++ + x++ + x-- - --x - --y
+
+var x = 6;
+var y = 10;
+console.log('Kết quả của "++y - y++ + x++ + x-- - --x - --y" là: ', ++y - y++ + x++ + x-- - --x - --y);
+console.log(x)
+console.log(y)
+/*
+x = 6; y = 10,
+++y: y tăng ngay 1, y = 11,
+y++: thực hiện phép tính rồi mới tăng y thêm 1, ++y - y++ = 11 - 11 =0 (1), (x =6, y = 12)
+x++: thực hiện phép tính rồi mới tăng x thêm 1, ++y - y++ + x++ = 0(1) + 6 = 6 (3), (x = 7, y = 12)
+x--: thực hiện phép tính rồi mới giảm x xuống 1, ++y - y++ + x++ + x-- = 6(3) + 7 = 13 (4), (x = 6, y = 12)
+--x: x giảm ngay 1, x = 5, ++y - y++ + x++ + x-- - --x = 13 (4) - 5 = 8 (5), (x = 5, y = 12)
+--y: y giảm ngay 1, y = 11, ++y - y++ + x++ + x-- - --x - --y = 8(5) - 11 = -3 (6), (x = 5, y = 11)
+*/
+------------------------------------------------------------------------------------------------
+3.3) x = 10, y = 12, z = 16. Tính: x++ + z-- - --x + --y - y-- + ++y + ++z + --z + x--
+
+var x = 10;
+var y = 12;
+var z = 16;
+console.log('Kết quả của "x++ + z-- - --x + --y - y-- + ++y + ++z + --z + x--" là: ', x++ + z-- - --x + --y - y-- + ++y + ++z + --z + x--);
+console.log(x)
+console.log(y)
+console.log(z)
+/*
+x = 10, y = 12, z = 16
+x++: thực hiện phép tính rồi mới tăng x thêm 1,
+z++: thực hiện phép tính rồi mới giảm z xuống 1,
+x++ + z++ = 10 + 16 = 26 (1), (x = 11, y = 12, z = 15)
+--x: x giảm ngay 1, x = 10, x++ + z-- - --x = 26(1) - 10 = 16 (2), (x = 10, y = 12, z = 15)
+--y: y giảm ngay 1, y = 11, x++ + z-- - --x + --y = 16(2) + 11 =27 (3), (x = 10, y = 11, z = 15)
+y--: thực hiện phép tính rồi mới giảm y xuống 1, x++ + z-- - --x + --y - y-- = 27(3) - 11 = 16 (3), (x = 10, y = 10, z = 15)
+++y: y tăng ngay 1, y = 11, x++ + z-- - --x + --y - y-- + ++y = 16(3) + 11 = 27 (4), (x = 10, y = 11, z = 15)
+++z: z tăng ngay 1,z = 16, x++ + z-- - --x + --y - y-- + ++y + ++z = 27(4) + 16 = 43 (5), (x = 10, y = 11, z = 16)
+--z: z giảm ngay 1, z = 15, x++ + z-- - --x + --y - y-- + ++y + ++z + --z = 43(5) + 15 = 58 (6), (x = 10, y = 11, z = 15)
+x--: thực hiện phép tính rồi mới giảm x xuống 1, x++ + z-- - --x + --y - y-- + ++y + ++z + --z + x-- = 58 (6) + 10 = 68 (7) (x = 9, y = 11, z = 15)
+
+*/
+
+========================== Bài 4: ===========================
+
+4) Khai báo 5 biến với 5 kiểu dữ liệu 
+var a = 5; //integer
+var nameStudent = 'Le Van Phong'; //string
+var gioiTinhNam = true; //boolean
+var arrStudents = [
+    'Le Van Phong',
+    'Vo Hoang Long',
+    'Tran Xuan Tu'
+]; //array
+var objThongTin = {
+    id:'01',
+    age: 20,
+    gioiTinhNam: true,
+} //object
+
+console.log(a)
+console.log(nameStudent)
+console.log(gioiTinhNam)
+console.log(arrStudents)
+console.log(objThongTin)
+
+=========================== Bài 5: ===============================
+
+5) Tạo mảng với cả phần tử: [1,2,3,4,5,6,7,8,9,10]
+
+var Arr = [
+    1,2,3,4,5,6,7,8,9,10
+];
+-----------------------------------------------------------------
+5.1) Tính tổng (+) phần tử đầu tiên (0) và phần từ thứ 2 (1):
+console.log('Tổng hai phần tử đầu tiên là: ', Arr[0]+Arr[1])
+-----------------------------------------------------------------
+5.2) Tính tích (*) phần tử đầu tiên (0) và phần từ cuối cùng (9)
+
+console.log('Tích hai phần tử đầu và cuối là: ', Arr[0]*Arr[9])
+
+============================ Bài 6: ===============================
+
+6) Tạo Object bao gồm firstName, lastName, age, favorite
+
+var obj = {
+    firstName:'Le',
+    lastName:'Phong',
+    age: 20,
+    favorite:'Code'
+};
+console.log('firstName ban dau la: ',obj.firstName);
+obj.firstName = 'Tran'
+console.log('firstName sau khi thay la: ',obj.firstName);
+console.log('lastName ban dau la: ',obj.lastName);
+obj.lastName = 'Tu';
+console.log('lastName sau khi thay la: ',obj.lastName);
